@@ -1,0 +1,87 @@
+main
+{
+    display: flex;
+}
+
+#card-detail
+{
+    width: 100%;
+}
+
+.card
+{
+    width: 376px;
+}
+
+.card-body
+{
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    width: 376px;
+    cursor: pointer;
+    border: 1px solid #f3f3f3;
+    border-bottom: 0;
+    border-radius: 0 !important;
+    padding-left: 1em;
+}
+
+.user-img
+{
+    display: flex;
+   
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 1000px;
+    margin: 7px 0;
+}
+
+
+.user-info > *
+{
+    margin: 0;
+    
+}
+
+.user-info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: inherit;
+    margin: 0 18px;
+}
+
+}
+
+.user-name
+{
+    /* margin: 5px 0 6px 0px; */
+}
+
+.user-message
+{
+    /* margin: 0 0 6px 0px;  */
+    font-size: 14px;
+    color: #999999;
+}
+
+.user-last-seen > *
+{
+    margin: 0;
+}
+
+
+.user-last-seen
+{
+    display: flex;
+}
+
+.message-day
+{
+    color: #aaa8a4;
+    font-size: 13px;
+    margin: 5px;
+}
