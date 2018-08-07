@@ -44,7 +44,7 @@ let whatsappcontacts = [
     },
 
     {
-        "name" : "anum faraz",
+        "name" : "Anum faraz",
         "image" : "dp5.jpg",
         "message"    : "hvhvhvh hhb",
         "messageCheck" : "not delivered",
@@ -55,7 +55,7 @@ let whatsappcontacts = [
     },
 
     {
-        "name" : "mobi",
+        "name" : "Mobi",
         "image" : "dp6.jpg",
         "message"    : "gggrfrg grgg...",
         "messageCheck" : "sent",
@@ -66,7 +66,7 @@ let whatsappcontacts = [
     },
 
     {
-        "name" : "arsalan",
+        "name" : "Arsalan",
         "image" : "dp7.jpg",
         "message"    : "gkndkgn sgb...",
         "messageCheck" : "not delivered",
@@ -143,7 +143,7 @@ let whatsappcontacts = [
     },
 
     {
-        "name" : "asma",
+        "name" : "Asma",
         "image" : "dp14.jpg",
         "message"    : "hjhjksjgss hjgj",
         "messageCheck" : "seen",
@@ -173,41 +173,49 @@ let whatsappcontacts = [
         "email" : "emadulhaq@gmail.com",
         "status" : "#Zindagi",
         "lastMessageCheck" : "7/20/18"
-    }  
-]
+    }
+];
 
 function initialised()
 {
     let chatBox =document.querySelector(".card");
-    // let icon = document.querySelector("i");
-
-    // if("seen" === "seen")
-    // {
-    //     icon.innerHTML =<i class="fas fa-check-double"></i>
-    // }
+  
 
     for(i=0;i<whatsappcontacts.length;i++)
     {
+        let icon = '';
+        if(whatsappcontacts[i].messageCheck === 'seen'){
+            icon  = "'fas fa-check-double'";
+        }
+        else if(whatsappcontacts[i].messageCheck === 'sent'){
+            icon = "'fas fa-check'"
+        }
+        else{
+            icon = "'far fa-clock'"
+        }
+
+        
         chatBox.innerHTML +=
-                            `   <a><div class="card-body list-group-item list-group-item-action" 
-                                onclick="showUserDetail(${i})">
-                                    <div class="user-img"  
+                            `   
+                            <div class="card-body list-group-item list-group-item-action" 
+                                    onclick="showUserDetail(${i})">
+                                    <div class="user-img style="white-space: nowrap""  
                                     style="background-image: url(images/${whatsappcontacts[i].image})";>
                                     </div>
                                     <div class="user-info"> 
                                         <h6 class="user-name">
                                             ${whatsappcontacts[i].name}
                                         </h6>
-                                        <p class="user-message">
-                                            <i class="fas fa-check"></i>  
+                                        <p class="user-message" style="white-space: nowrap">
+                                            <i class=${icon}></i>  
                                             ${whatsappcontacts[i].message}
                                         </p>
                                     </div>
                                     <div class="user-last-seen">
-                                        <p class="message-day">
+                                        <p class="message-day" style="white-space: nowrap">
                                         ${whatsappcontacts[i].lastMessageCheck}</p>
                                     </div>
-                                </div></a>
+                                </div>
                             `
     }
 }
@@ -216,9 +224,10 @@ function initialised()
 function showUserDetail(contacDetail)
 {
     
-    document.querySelector("#show-image").style["background-image"] = `url(/images/${whatsappcontacts[contacDetail].image})`;                                    ;           
-    document.querySelector("#card-detail #show-name.card-text span").innerHTML=`${whatsappcontacts[contacDetail].name}`;  
-    document.querySelector("#card-detail #show-number.card-text span").innerHTML=`${whatsappcontacts[contacDetail].phoneNumber}`;  
-    document.querySelector("#card-detail #show-email.card-text span").innerHTML=`${whatsappcontacts[contacDetail].email}`;           
+    document.querySelector("#card-detail #show-image").style.backgroundImage = `url(images/${whatsappcontacts[contacDetail].image})`;
+    document.querySelector("#card-detail #show-name.card-text span").innerHTML=`${whatsappcontacts[contacDetail].name}`; 
+    document.querySelector("#card-detail #defult.card-text").innerHTML=``; 
+    document.querySelector("#card-detail #show-number.card-text span").innerHTML=`<i class="fas fa-phone"></i> ${whatsappcontacts[contacDetail].phoneNumber}`;  
+    document.querySelector("#card-detail #show-email.card-text span").innerHTML=`<i class="far fa-envelope"></i> ${whatsappcontacts[contacDetail].email}`;           
     document.querySelector("#card-detail #show-status.card-text span").innerHTML=`${whatsappcontacts[contacDetail].status}`;                   
 }
