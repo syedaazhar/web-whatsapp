@@ -25,49 +25,115 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="initialised()">
-     <main>
-         <section class="card-container">
-        <section class="card ">
-            <!-- <div class="card-body list-group-item list-group-item-action" 
-                                     onclick="showUserDetail()">
-                                     <div class="user-img"  
-                                     style="background-image: url(images/dp4.jpg)">
-                                     </div>
-                                     <div class="user-info"> 
-                                         <h6 class="user-name">
-                                             niha amin
-                                         </h6>
-                                         <p class="user-message">
-                                             <i class=${icon}></i>  
-                                         </p>                                     
-                                    </div>
-                                     <div class="user-last-seen">
-                                       <p class="message-day">
-                                           kkg;dfjg;dfjg;lfdlg;;l
-                                        </p>
-                                    </div>
-                                 </div> -->
-        </section>
-        </section>
-        <div id="card-detail" class=" text-center" >
-                    <div id="show-image" class="card-title" > 
+
+    <main>
+                    <!-- hide-siide-bar -->
+        <div id="mySidenav" class="sidenav">
+            <div class="profile-div">
+                <a href="#" class="closebtn" onclick="closeNav()"><i class="fas fa-arrow-left"></i></a>
+                <P class="profile">Profile</P>
+            </div>
+            <div class="profile-pic" >
+            </div>
+            <div class="profile-name-div">
+                <h6 class="profile-name-heading">Your Name</h6>
+                <div class="enter-name">
+                    <p class="profile-name">Maria Azhar</p>
+                    <i class="fas fa-pen"></i>
+                </div>
+            </div>
+            <div class="account">
+                <p class="account-info">
+                    This is not your username or pin.This name will be visible
+                    to your WhatsApp contacts.
+                </p>
+            </div>
+            <div class="about-div">
+                <h6 class="about">About</h6>
+                <div class="enter-status">
+                    <p class="status">
+                        hey their i am using WhatsApp
+                    </p>
+                    <i class="fas fa-pen"></i>
+                </div>
+            </div>
+        </div>
+
+                <!-- side bar -->
+        <div class="whatsapp-header">
+            <header class="fixed-side-header position-sticky">
+                <header class="side-header">
+                    <div class="side-header-img" onclick="openNav()"></div>
+                    <div class="side-header-icons">
+                        <i class="fas fa-sync-alt"></i>
+                        <i class="fab fa-stack-exchange"></i>
+                        <i class="fas fa-ellipsis-v"></i>
                     </div>
-                    <p id="show-name" class="card-text">
-                            <span></span>
-                    </p>
-                    <h5 id="defult" class="card-text">Please choose a contact to view details </h5>
-                   
-                    <p id="show-number" class="card-text" >
-                            <span></span>
-                    </p>
-                    <p id="show-email" class="card-text" > 
-                        <span></span>
-                    </p>
-                    <p id="show-status" class="card-text">   
-                        <span></span>
-                    </p>
+                </header>
+            </header>
+            <section class="card-container">
+                <section class="card ">
+                </section>
+            </section>
+        </div>
+                    <!-- main-navbar -->
+        <div id="card-detail" >
+            <nav class="navbar position-sticky">
+                <nav class="nav-div">
+                    <div class="nav-user-img">
+                    </div>
+                    <div class="nav-user-info">
+                        <h6 class="nav-user-name">
+                            Niha Amin
+                        </h6>
+                        <p class="nav-user-lastseen">
+                            last seen Yesterday at 11:56 PM
+                        </p>
+                    </div>
+                    <div class="nav-icons">
+                        <i class="fab fa-sistrix"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </nav>    
+            </nav>
+            <div id="show-image" class="card-title" > 
+            </div>
+            <p id="show-name" class="card-text">
+                    <span></span>
+            </p>
+            <h5 id="defult" class="card-text">Please choose a contact to view details </h5>
+            
+            <p id="show-number" class="card-text" >
+                    <span></span>
+            </p>
+            <p id="show-email" class="card-text" > 
+                <span></span>
+            </p>
+            <p id="show-status" class="card-text">   
+                <span></span>
+            </p>
         </div>    
-       
     </main>
 </body>
 </html>
+
+
+
+<!-- <main>
+        <div class="whatsapp-header">
+            <header class="side-header">
+                <div class="header-img"></div>
+                <div class="header-icons">
+                    <i class="fas fa-sync-alt"></i>
+                    <i class="fab fa-stack-exchange"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </header>
+        
+            <section class="card-container">
+                <section class="card ">
+                </section>
+            </section>
+            </div>
+             -->

@@ -231,3 +231,11 @@ function showUserDetail(contacDetail)
     document.querySelector("#card-detail #show-email.card-text span").innerHTML=`<i class="far fa-envelope"></i> ${whatsappcontacts[contacDetail].email}`;           
     document.querySelector("#card-detail #show-status.card-text span").innerHTML=`${whatsappcontacts[contacDetail].status}`;                   
 }
+
+function openNav() {
+    document.querySelector("#mySidenav").style.width = "400px";
+}
+
+function closeNav() {
+    document.querySelector("#mySidenav").style.width = "0";
+}
