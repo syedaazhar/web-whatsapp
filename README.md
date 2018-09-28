@@ -37,7 +37,7 @@ check this simple and amazing librarys
   
 * Google Fonts
 
- https://fonts.google.com/
+  https://fonts.google.com/
 
 ## Website URL
 https://syedaazhar.github.io/web-whatsapp/#
