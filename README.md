@@ -1,12 +1,10 @@
 # web-whatsapp
 
-This is web-whatsapp.
+This is web-whatsapp.I have replicate this website with pixel Perfection. 
 
-I have replicate this website with pixel Perfection. 
+  It's very similar like web-whatsapp
 
-It's very similar like web-whatsapp
-
-i show contact info through hard-coded **JSON**
+  I show contact info through hard-coded **JSON**
 
 
 ## Using 
